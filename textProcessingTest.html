@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>textprocessing.com Test</title>
+</head>
+<body>
+
+	<form action="http://text-processing.com/api/tag/" method="POST">
+		<fieldset>
+			<legend>Tag and Chunk Text</legend>
+			<ul class="form">
+				<li><label for="id_tagger">Choose tagger/chunker</label>
+					<div>
+						<select name="tagger" id="id_tagger"><optgroup
+								label="English Taggers &amp; Chunkers">
+								<option value="default">Default Tagger &amp; NE Chunker</option>
+								<option value="binary">Default Tagger &amp; Binary NE
+									Chunker</option>
+								<option value="ieer">Default Tagger &amp; IEER NE
+									Chunker</option>
+								<option value="treebank">Treebank</option>
+								<option value="conll2000">CoNLL2000</option>
+							</optgroup>
+<!-- 							<optgroup label="Non-English Taggers &amp; Chunkers"> -->
+<!-- 								<option value="conll2002_esp">CoNLL2002 Spanish</option> -->
+<!-- 								<option value="conll2002_ned">CoNLL2002 Dutch</option> -->
+<!-- 								<option value="alpino">Alpino Dutch</option> -->
+<!-- 								<option value="floresta">Floresta Portuguese</option> -->
+<!-- 							</optgroup> -->
+<!-- 							<optgroup label="English Taggers"> -->
+<!-- 								<option value="brown">Brown</option> -->
+<!-- 								<option value="nps_chat">NPS Chat</option> -->
+<!-- 								<option value="switchboard">Switchboard</option> -->
+<!-- 								<option value="timit">Timit</option> -->
+<!-- 							</optgroup> -->
+<!-- 							<optgroup label="Non-English Taggers"> -->
+<!-- 								<option value="cess_cat">CESS Catalan</option> -->
+<!-- 								<option value="cess_esp">CESS Spanish</option> -->
+<!-- 								<option value="pl196x">1960's Polish</option> -->
+<!-- 								<option value="mac_morpho">MAC-MORPHO Brazilian -->
+<!-- 									Portuguese</option> -->
+<!-- 								<option value="sinica_treebank">Sinica Treebank Chinese</option> -->
+<!-- 							</optgroup> -->
+<!-- 							<optgroup label="Indian Taggers"> -->
+<!-- 								<option value="bangla">Bangla</option> -->
+<!-- 								<option value="hindi">Hindi</option> -->
+<!-- 								<option value="marathi">Marathi</option> -->
+<!-- 								<option value="telugu">Telugu</option> -->
+<!-- 							</optgroup></select> -->
+					</div></li>
+				<li><label for="id_text">Enter text</label>
+					<div>
+						<textarea id="id_text" rows="12" cols="38" name="text">San Francisco is very foggy.</textarea>
+					</div>
+					<p class="notice">Enter up to 50000 characters</p></li>
+			</ul>
+			<input value="Tag &amp; Chunk" type="submit">
+		</fieldset>
+	</form>
+
+</body>
+</html>
