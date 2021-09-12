@@ -207,6 +207,7 @@ function go() {
 				let word = taggedWords[i][0];
 				let replacement = word;
 				let originalReplacement = replacement;
+				let lcWord;
 				if (word == "_CRLF_") {
 					replacement = "<br/>";
 				} else {
@@ -214,7 +215,7 @@ function go() {
 						let tag = taggedWords[i][1];
 						let modifiedWords = posMod[tag].fromOriginalForm(word);
 						for (let j in modifiedWords) {
-							let lcWord = modifiedWords[j].toLowerCase();
+							lcWord = modifiedWords[j].toLowerCase();
 							if (synonyms[lcWord] && pos[i] && synonyms[lcWord][pos[i]] && synonyms[lcWord][pos[i]].length > 0) {
 								replacement = synonyms[lcWord][pos[i]][parseInt(synonyms[lcWord][pos[i]].length * Math.random())];
 								originalReplacement = replacement;
@@ -224,7 +225,7 @@ function go() {
 							}
 						}
 					} else {
-						let lcWord = word.toLowerCase();
+						lcWord = word.toLowerCase();
 						//				console.log(word + " : " + words[i]);
 						if (synonyms[lcWord] && pos[i] && synonyms[lcWord][pos[i]] && synonyms[lcWord][pos[i]].length > 0) {
 							replacement = synonyms[lcWord][pos[i]][parseInt(synonyms[lcWord][pos[i]].length * Math.random())];
