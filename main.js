@@ -241,9 +241,8 @@ function go() {
 				if (replacement == word || word == "_CRLF_") {
 					output += replacement;
 				} else {
-					let dictionaryUrl = "https://www.merriam-webster.com/dictionary/" + originalReplacement;
-					output += "<a target=\"definition\" href=\"" + dictionaryUrl + "\"  class=\"replaced-word\" onMouseOver=\"showWord(this, '" + word
-						+ "');\" onMouseOut=\"hideWord();\" >" + replacement + "</a>";
+					let dictionaryUrl = `https://www.merriam-webster.com/dictionary/${originalReplacement}`;
+					output += `<a target="definition" href="${dictionaryUrl}" class="replaced-word" onMouseOver="showWord(this, '${word}');" onMouseOut="hideWord();" >${replacement}</a>`;
 				}
 			}
 			$("#output").html(output);
