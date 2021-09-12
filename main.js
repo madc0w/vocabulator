@@ -165,7 +165,8 @@ function go() {
 	const modifiedWordIndexes = [];
 
 	const taggedWords = new POSTagger().tag(new Lexer().lex(text));
-	for (const taggedWord of taggedWords) {
+	for (let i in taggedWords) {
+		const taggedWord = taggedWords[i];
 		let word = taggedWord[0];
 		if (word == "_CRLF_") {
 			numCompletedRequests++;
