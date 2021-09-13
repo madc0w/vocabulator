@@ -71,16 +71,16 @@ const posMod = {
 		// verb, gerund
 		toOriginalForm: function (word) {
 			const words = word.split(" ");
-			if (words[0].endsWith("e")) {
+			if (words[0].endsWith('e') && ['see', 'be', 'flee', 'pee'].includes(words[0])) {
 				words[0] = words[0].substring(0, words[0].length - 1);
 			}
-			words[0] += "ing";
-			return words.join(" ");
+			words[0] += 'ing';
+			return words.join(' ');
 		},
 		fromOriginalForm: function (word) {
-			if (word.endsWith("ing")) {
+			if (word.endsWith('ing')) {
 				const minusSuffix = word.substring(0, word.length - 3);
-				return [minusSuffix, minusSuffix + "e"];
+				return [minusSuffix, minusSuffix + 'e'];
 			}
 			return null;
 		}
